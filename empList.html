@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Employees</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="./styles/list.css">
+</head>
+
+<body>
+
+    <header class="header-content header">
+        <div class="logo-content">
+            <img class="logo-image" src="./assets/profile-images/logo.png" alt="logo">
+            <div>
+                <span class="emp-text">EMPLOYEE</span><br>
+                <span class="emp-text emp-payroll">PAYROLL</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="list-info">
+            <div class="emp-details-text">Employee Details<div class="emp-count">0</div>
+            </div>
+            <div class="add-text">Add Employee</p>
+                <a href="addEmp.html" class="add-button" target="_blank">
+                    <img src="./assets/profile-images/add.png" alt="Add An Emp" width="40px">
+                </a>
+            </div>
+
+        </div>
+        <table id="display" class="table">
+            <tr>
+                <th>Profile</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Start Date</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+
+        <script src="./scripts/showList.js"></script>
+
+</body>

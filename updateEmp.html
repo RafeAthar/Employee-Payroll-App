@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee Details</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="./styles/form.css">
+</head>
+
+<body>
+
+    <header class="header-content header">
+        <div class="logo-content">
+            <img class="logo-image" src="./assets/profile-images/logo.png" alt="logo">
+            <div>
+                <span class="emp-text">EMPLOYEE</span><br>
+                <span class="emp-text emp-payroll">PAYROLL</span>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="form-content">
+        <form class="form" action="empList.html" onsubmit="save(); return false">
+            <div class="form-head">Employee Payroll Form - Update Details</div>
+            <div class="row-content">
+                <label for="name" class="label text">Name</label>
+                <input class="input" type="text" name="name" id="name" placeholder="Your Name" required>
+
+                <error-output class="text-error" for="text"></error-output>
+            </div>
+
+            <div class="row-content">
+                <label for="profile" class="label text">Profile Image</label>
+                <div class="profile-radio-content">
+                    <label>
+                        <input type="radio" name="profile" id="profile1" value="./assets/profile-images/face1.avif"
+                            required>
+                        <img src="./assets/profile-images/face1.avif" alt="img1" class="profile" id="image1">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="profile" id="profile2" value="./assets/profile-images/face2.avif"
+                            required>
+                        <img src="./assets/profile-images/face2.avif" alt="img2" class="profile" id="image2">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="profile" id="profile3" value="./assets/profile-images/face3.avif"
+                            required>
+                        <img src="./assets/profile-images/face3.avif" alt="img3" class="profile" id="image3">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="profile" id="profile4" value="./assets/profile-images/face4.avif"
+                            required>
+                        <img src="./assets/profile-images/face4.avif" alt="img4" class="profile" id="image4">
+                    </label>
+
+                </div>
+            </div>
+
+
+            <div class="row-content">
+                <label for="gender" class="label text">Gender</label>
+                <div>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male" class="text">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female" class="text">Female</label>
+                </div>
+            </div>
+
+
+            <div class="row-content">
+                <label for="department" class="label text">Department</label>
+                <div>
+                    <input class="checkbox" type="checkbox" name="department" id="hr" value="HR">
+                    <label for="hr" class="text">HR</label>
+                    <input class="checkbox" type="checkbox" name="department" id="sales" value="Sales">
+                    <label for="sales" class="text">Sales</label>
+                    <input class="checkbox" type="checkbox" name="department" id="finance" value="Finance">
+                    <label for="finance" class="text">Finance</label>
+                    <input class="checkbox" type="checkbox" name="department" id="engineering" value="Engineering">
+                    <label for="engineering" class="text">Engineering</label>
+                    <input class="checkbox" type="checkbox" name="department" id="others" value="Others">
+                    <label for="others" class="text">Others</label>
+                </div>
+            </div>
+
+
+            <div class="row-content">
+                <label for="salary" class="label text">Choose Your Salary</label>
+                <input class="input" type="range" class="salary" id="salary" name="salary" min="10000" max="100000"
+                    value="10000" step="1000" oninput="rangeValue.innerText = this.value" />
+                <p id="rangeValue">10000</p>
+            </div>
+
+
+            <div class="row-content">
+                <label class="label text" for="startDate">Start Date</label>
+                <input class="startDate" type="date" name="startDate" id="startDate" value="2023-01-01" min="2000-01-01"
+                    max="2024-12-31">
+            </div>
+
+
+            <div class="row-content">
+                <label for="notes" class="label text">Notes</label>
+                <textarea name="notes" id="notes" class="input" cols="30" rows="10"
+                    placeholder="Your Notes Here"></textarea>
+            </div>
+
+
+            <div class="buttonParent">
+                <a href="empList.html" class="resetButton button cancelButton">Cancel</a>
+                <button type="submit" class="button submitButton" id="submitButton">Update</button>
+                <button type="reset" class="resetButton button">Reset</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="./scripts/update.js"></script>
+</body>
+
+</html>
