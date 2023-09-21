@@ -1,0 +1,11 @@
+{
+    "name": "employee-apyroll-app",
+    "version": "1.0.0",
+    "description": "Employee Management App",
+    "scripts": {
+      "start": "echo 'No server-side code needed. This is a static website.'"
+    },
+    "author": "Rafe",
+    "license": "MIT"
+  }
+  
